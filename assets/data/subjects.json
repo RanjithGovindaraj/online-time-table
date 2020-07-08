@@ -1,0 +1,25 @@
+{
+    "PT":"Placement Training",
+    "14GET71": "Total Quality Management",
+    "14CST71": "Machine Learning",
+    "14CST72": "Mobile Communication",
+    "LABS":{
+        "14CSL71": "Machine Learning Algorithm Laboratory",
+        "14CSL72": "Mobile Communication Laboratory"
+    },
+    "ELECTIVE1": {
+      "14CSE06": "Software Testing",
+      "14CSE11": "Business Intelligence and its Application"
+    },
+    "ELECTIVE2": {
+      "14CSO07": "E-Commerce",
+      "14ITO06": "Free Open Source Software",
+      "14MEO07": "3D Printing and Design",
+      "14ECO07": "Quantum Computing"
+    },
+    "ELECTIVE3": {
+      "14ITO01": "Internet of Things",
+      "14ITO04": "Mobile Application Development",
+      "14EEO04": "Energy Storage Systems"
+    }
+  }

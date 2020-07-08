@@ -1,0 +1,42 @@
+{
+    "1": [
+      "PT",
+      "PT",
+      "14CST72",
+      "ELECTIVE2",
+      "ELECTIVE1",
+      "14GET71"
+    ],
+    "2": [
+      "PT",
+      "PT",
+      "ELECTIVE2",
+      "ELECTIVE1",
+      "ELECTIVE3",
+      "14CST71"
+    ],
+    "3": [
+      "PT",
+      "PT",
+      "14CST72",
+      "14GET71",
+      "LABS",
+      "LABS"
+    ],
+    "4": [
+      "PT",
+      "PT",
+      "14CST71",
+      "ELECTIVE3",
+      "14CST72",
+      "ELECTIVE2"
+    ],
+    "5": [
+      "PT",
+      "PT",
+      "ELECTIVE3",
+      "14CST71",
+      "14GET71",
+      "ELECTIVE1"
+    ]
+  }
