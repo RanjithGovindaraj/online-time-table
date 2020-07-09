@@ -20,6 +20,7 @@ function loadTimeTable() {
 function loadLink() {
     var d = new Date();
     let todayData = document.getElementById("todayData");
+    let nextData = document.getElementById("nextPeriodData");
     if (d.getDay() == 0 || d.getDay() == 6) {
         todayData.innerHTML = "<img src='assets/img/weekend.jpg' width='500'/>";
     }
@@ -29,8 +30,11 @@ function loadLink() {
         h = d.getHours();
         m = d.getMinutes();
         todayData.innerHTML = getPeriod(t,h);
+        nextData.innerHTML = getPeriod(t,h+1);
     }
     loadTimeTable();
     setTimeout(loadLink,(60-m)*60000); 
 }
+
+
 
