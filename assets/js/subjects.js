@@ -47,6 +47,7 @@ links = {
     ]
   }
 
+//receives subject's short name and returns the full name
 function getSubjectTitle(subGrp) {
     grps = ['LABS','ELECTIVE1','ELECTIVE2','ELECTIVE3'];
     if(grps.includes(subGrp)) {
@@ -60,6 +61,8 @@ function getSubjectTitle(subGrp) {
         return subjects[subGrp];
 }
 
+
+//receives subject's short name and returns the subject code
 function getSubjectCode(subGrp) {
     grps = ['LABS','ELECTIVE1','ELECTIVE2','ELECTIVE3'];
     if(grps.includes(subGrp)) {
@@ -73,6 +76,7 @@ function getSubjectCode(subGrp) {
         return subGrp;
 }
 
+//receives subject's short name and returns the link(s)
 function getLinks(subGrp) {
     grps = ['14CSL71','14CSL72'];
     if(grps.includes(subGrp)) {

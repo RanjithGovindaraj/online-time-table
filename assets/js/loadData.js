@@ -1,3 +1,5 @@
+
+//loads the time table
 function loadTimeTable() {
     d = new Date();
     let timetable = document.getElementById("timetable");
@@ -5,7 +7,7 @@ function loadTimeTable() {
     if (d.getDay() > 0 && d.getDay() < 6) {
         timetable.innerHTML = "<thead><tr><th scope='col'>Timing</th><th scope='col'>Subject</th></tr></thead><tbody>";
         classHrs = [9,10,11,12,14,15];
-        schedule = todaySchedule(d.getDay());
+        schedule = getSchedule(d.getDay());
         for(i=0;i<classHrs.length;i++){
             timetable.innerHTML += "<tr><th scope = 'row'>"+classHrs[i]+" - "+classHrs[i]+".45"+"</th><td>"+schedule[i]+"</td>"+"</td></tr>";
         }
@@ -14,6 +16,7 @@ function loadTimeTable() {
 
 }
 
+//loads the link in the website
 function loadLink() {
     var d = new Date();
     let todayData = document.getElementById("todayData");
@@ -28,6 +31,6 @@ function loadLink() {
         todayData.innerHTML = getPeriod(t,h);
     }
     loadTimeTable();
-    setTimeout(loadLink,(60-m)*60000);
+    setTimeout(loadLink,(60-m)*60000); 
 }
 

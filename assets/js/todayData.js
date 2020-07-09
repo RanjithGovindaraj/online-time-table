@@ -41,10 +41,12 @@ timetable = {
     ]
   }
 
-function todaySchedule(day) {
+//gets schedule for the given day
+function getSchedule(day) {
     return timetable[day];
 }
 
+//prepare data for the given name and link
 function preparePeriod(subName,subLink) {
     data = "";
     console.log(subLink)
@@ -67,8 +69,9 @@ function preparePeriod(subName,subLink) {
     return data;
 }
 
+//gets the name and link
 function getPeriod(day,hour) {
-    schedule = todaySchedule(day);
+    schedule = getSchedule(day);
     classHrs = [9,10,11,12,14,15];
     if(classHrs.includes(hour)){
         subGrp = schedule[classHrs.indexOf(hour)];
@@ -87,7 +90,7 @@ function getPeriod(day,hour) {
     }
     else {
         data = "";
-        if(hour < 9 && hour == 13)
+        if(hour < 9 || hour == 13)
             data =  "Class yet to start<br>"+"<img src='assets/img/classstart.jpg' width='500'/>";
         else
             data =  "Classes are over<br>"+"<img src='assets/img/classover.jpg' width='500'/>";
