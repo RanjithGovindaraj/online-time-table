@@ -16,9 +16,11 @@ function loadTimeTable() {
 
 }
 
+
 //loads the link in the website
 function loadLink() {
     var d = new Date();
+    loadTimeTable();
     let todayData = document.getElementById("todayData");
     let nextData = document.getElementById("nextPeriodData");
     if (d.getDay() == 0 || d.getDay() == 6) {
@@ -26,14 +28,15 @@ function loadLink() {
     }
     else {
         
-        t=d.getDay();
+        t=d.getDay();   
         h = d.getHours();
         m = d.getMinutes();
         todayData.innerHTML = getPeriod(t,h);
+        console.log(t+' '+h);
+        // h = h + 1;
         nextData.innerHTML = getPeriod(t,h+1);
+        console.log(t+' '+h);
     }
-    loadTimeTable();
-    setTimeout(loadLink,(60-m)*60000); 
 }
 
 

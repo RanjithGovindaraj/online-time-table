@@ -36,9 +36,9 @@ timetable = {
       "PT",
       "ELECTIVE3",
       "14CST71",
-      "14GET71",
-      "ELECTIVE1"
-    ]
+      "ELECTIVE1",
+      "14GET71"
+    ],
   }
 
 //gets schedule for the given day
@@ -49,11 +49,9 @@ function getSchedule(day) {
 //prepare data for the given name and link
 function preparePeriod(subName,subLink) {
     data = "";
-    console.log(subLink)
     if(subName == "Placement Training" )
         return "<p>Placement Training - Use respective Links</p>";
     if(Array.isArray(subName) && Array.isArray(subLink)) {
-        console.log(subLink)
         for (i = 0;i<subName.length;i++){
             if(Array.isArray(subLink[0])){
                 for(j = 0;j<subLink.length;j++) {
@@ -71,7 +69,10 @@ function preparePeriod(subName,subLink) {
 
 //gets the name and link
 function getPeriod(day,hour) {
-    schedule = getSchedule(day);
+    // console.log(day+' '+hour);
+    var schedule = getSchedule(day);
+    console.log(schedule);
+    console.log("schedule: "+getSchedule(day));
     classHrs = [9,10,11,12,14,15];
     if(classHrs.includes(hour)){
         subGrp = schedule[classHrs.indexOf(hour)];
