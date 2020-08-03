@@ -5,7 +5,7 @@ function loadTimeTable(day) {
   if (day > 0 && day < 6) {
     timetable.innerHTML =
       "<thead><tr><th scope='col' style='width:130px'>Period</th><th scope='col'>Subject</th></tr></thead><tbody>";
-    classHrs = [9, 10, 11, 12, 14, 15];
+    classHrs = [9, 10, 11, 12, 14];
     schedule = getSchedule(day);
     for (i = 0; i < classHrs.length; i++) {
       timetable.innerHTML +=

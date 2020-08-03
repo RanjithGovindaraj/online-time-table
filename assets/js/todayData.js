@@ -2,43 +2,38 @@ timetable = {
     "1": [
       "PT",
       "PT",
-      "14CST72",
+      "14GET71",
       "ELECTIVE2",
-      "ELECTIVE1",
-      "14GET71"
+      "ELECTIVE1"
     ],
     "2": [
       "PT",
       "PT",
-      "ELECTIVE2",
-      "ELECTIVE1",
-      "ELECTIVE3",
-      "14CST71"
+      "14CST72",
+      "14CST71",
+      "ELECTIVE3"
     ],
     "3": [
       "PT",
       "PT",
-      "14CST72",
       "14GET71",
-      "LABS",
-      "LABS"
+      "14CST72",
+      "14CST71"
     ],
     "4": [
       "PT",
       "PT",
-      "14CST71",
+      "ELECTIVE1",
       "ELECTIVE3",
-      "14CST72",
-      "ELECTIVE2"
+      "14CST71"
     ],
     "5": [
       "PT",
       "PT",
-      "ELECTIVE3",
-      "14CST71",
-      "ELECTIVE1",
-      "14GET71"
-    ],
+      "ELECTIVE2",
+      "14GET71",
+      "14CST72"
+    ]
   }
 
 //gets schedule for the given day
@@ -73,7 +68,7 @@ function getPeriod(day,hour) {
     var schedule = getSchedule(day);
     console.log(schedule);
     console.log("schedule: "+getSchedule(day));
-    classHrs = [9,10,11,12,14,15];
+    classHrs = [9,10,11,12,14];
     if(classHrs.includes(hour)){
         subGrp = schedule[classHrs.indexOf(hour)];
         subName = getSubjectTitle(subGrp);

@@ -51,7 +51,7 @@ links = {
 function getSubjectTitle(subGrp) {
     grps = ['LABS','ELECTIVE1','ELECTIVE2','ELECTIVE3'];
     if(grps.includes(subGrp)) {
-        t = subjects[subGrp];
+        t = subjects[subGrp]; 
         list = []
         for(var key in t)
             list.push(t[key]);
