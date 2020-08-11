@@ -40,3 +40,43 @@ function loadLink() {
     nextData.innerHTML = getPeriod(day, h + 1);
   }
 }
+
+function snackBarFunction() {
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar");
+
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+
+$(document).ready(function() {
+    if(localStorage.getItem('popState') != 'shown'){
+      $('#popup').delay(2000).fadeIn();
+    }
+    else {
+      $('#popup').fadeOut();
+    }
+    $('#feedBackYes, #feedBackNo').click(function() // You are clicking the close button
+    {
+
+      link='';
+      if(this.id == 'feedBackYes')
+        link = 'https://api.countapi.xyz/hit/cpyes1';
+      else if (this.id == 'feedBackNo') {
+        link = 'https://api.countapi.xyz/hit/cpno1';
+      }
+      $.getJSON(link,function(){
+        localStorage.setItem('popState','shown');
+        $('#popup').fadeOut(); // Now the pop up is hidden.
+      });
+      snackBarFunction();
+      localStorage.setItem('popState','shown');
+      $('#popup').fadeOut();
+    });
+   
+});
+
